@@ -11,7 +11,7 @@
 ## Introduction 
 The objective of this project is to derive insights on attributes related to vehicle loan defaulting and build an initial predictive model & pipeline.
 
-Initial questions of interest to investigate:
+Early questions of interest to investigate:
 * What are the most influential attributes associated with vehicle loan defaults?
 * If someone has been shopping around for loans, what is the relationship between number of loan inquiries and potential to default the loan?
 * How does credit history age affect risk to default?
@@ -77,13 +77,22 @@ A preliminary logistic regression model was trained on the following features:
 * 'PERFORM_CNS.SCORE.DESCRIPTION (values one hot encoded)
 * 'State_ID (values one hot encoded)
 
-Decision threshold was adjusted to 0.3 to increase performance to resulting ROC AUC of: 0.5193696057892393 and the following confusion matrix:
+Decision threshold was adjusted to 0.25 to increase performance to resulting  
+ROC AUC of: 0.5307070727456186, f1 score of 0.3227277168072426 and confusion matrix:
+
+                 actual neg   actual pos 
+
+      pred pos     15630   |    4955    |
+
+      pred neg     20879   |    5167    |
+
 
 ***Current takeaways:***
 
 **What are the most influential attributes associated with vehicle loan defaults?**
 
-- The top 5 most influential attributes associated with vehicle loan defaults are 'PERFORM_CNS.SCORE', 'asset_cost', ltv', 'CREDIT.HISTORY.LENGTH.MONTHS', and 'PRI.Installment.PCT' based on my analysis so far.
+- The top 5 most influential attributes associated with vehicle loan defaults based on my analysis so far are  
+asset_cost, disbursed_amount, PERFORM_CNS.SCORE, SEC.SANTIONED_AMOUNT, and PRI.DISBURSED.AMOUNT.
 
 **If someone has been shopping around for loans, what is the relationship between number of loan inquiries and potential to default the loan?**
  
