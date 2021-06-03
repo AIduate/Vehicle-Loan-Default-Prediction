@@ -78,9 +78,13 @@ A preliminary logistic regression model was trained on the following features:
 * 'PERFORM_CNS.SCORE.DESCRIPTION (values one hot encoded)
 * 'State_ID (values one hot encoded)
 
-Decision threshold was adjusted to 0.24 to increase performance to resulting  
-ROC AUC of: 0.60, f1 score of 0.39 and 
-confusion matrix:
+***Resulting Performance:***
+
+Decision threshold was adjusted to 0.24
+
+* ROC AUC: 0.60
+* f1 score: 0.39
+* confusion matrix:
 
                  actual neg   actual pos 
 
@@ -88,8 +92,8 @@ confusion matrix:
 
       pred neg     24331   |    4706    |
 
-Precision = 0.31
-Recall = 0.54
+* Precision = 0.31
+* Recall = 0.54
 
 ***Current takeaways:***
 
